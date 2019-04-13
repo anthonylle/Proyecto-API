@@ -1,0 +1,34 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "API to be hosted in Heroku and used to retrieve data to any App by using HTTP Requests",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonylle/Proyecto-API.git"
+  },
+  "keywords": [
+    "API",
+    "Nodejs",
+    "Express",
+    "Heroku",
+    "REST"
+  ],
+  "author": "Anthony Leandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonylle/Proyecto-API/issues"
+  },
+  "homepage": "https://github.com/anthonylle/Proyecto-API#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http": "0.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
