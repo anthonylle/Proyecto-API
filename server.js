@@ -7,6 +7,6 @@ router.get('/', (req, res) =>{
 });
 
 const server = http.createServer(router);
-server.listen(5000, function(){
+server.listen(process.env.PORT || 5000, function(){
 	console.log("Express server running on port: 5000");
 });
