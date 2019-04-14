@@ -9,8 +9,7 @@ exports.create = (req, res) => {
             message: "Course content can not be empty"
         });
     }
-    console.log("RECEIVED REQUEST");
-    console.log(req);
+    
     // Create a Course
     const course = new Course({
         name: req.body.name || "Unnamed course"

@@ -13,10 +13,11 @@ router.use(function(req, res, next) {
     next();
 });
 
-
 const config = require('./config.js');
 const mongoose = require('mongoose');
-require('./course/course.routes.js')(router);  //Add route file here
+require('./server/routes/course/course.routes.js')(router);  //Add route file here
+require('./server/routes/food/food.routes.js')(router);  //Add route file here
+require('./server/routes/task/task.routes.js')(router);  //Add route file here
 
 mongoose.Promise = global.Promise;
 
@@ -30,37 +31,10 @@ mongoose.connect(config.url, {
     process.exit();
 });
 
-
-
 // default route
 router.get('/', (req, res) =>{
 	res.send("Welcome to this API");
 });
-
-
-
-/*
-router.get('/courses', (req, res) =>{
-	coursesModel.find({},function(error, docs){
-		if(error)
-			res.send("error");
-		else
-			res.send("docs");
-	});
-	//return res.send('Received a GET HTTP method');
-});
-
-router.post('/course', (req, res) =>{
-	return res.send('Received a POST HTTP method');
-});
-
-router.put('/course:courseId', (req, res) =>{
-	return res.send('Received a PUT HTTP method');
-});
-
-router.delete('/course:courseId', (req, res) =>{
-	return res.send('Received a DELETE HTTP method');
-});*/
 
 const server = http.createServer(router);
 server.listen(process.env.PORT || config.serverport, function(){
